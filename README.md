@@ -126,7 +126,7 @@ nano sidecarpod.yml
 
 A text editor window should open. Copy and paste the code below into the text editor.
 
-![image alt]()
+![image alt](https://github.com/Tatenda-Prince/Kubernetes-Declaratively-Deploying-Infrastructure-Iac-/blob/37fb2a22ab1fb71f0937b67e73ef94ab6970cd4f/images/Screenshot%202024-12-29%20170039.png)
 
 
 
