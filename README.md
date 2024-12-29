@@ -193,6 +193,8 @@ how multi-container Pods appear in the outputs.
 
 kubectl delete -f sidecarpod.yml 
 
+# Step 2: Using the Declarative model to manage Deployment Yaml file for Self-healing, Scaling, Rollouts and Rollbacks.
+
 
 
 
