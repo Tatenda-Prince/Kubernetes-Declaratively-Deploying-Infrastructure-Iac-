@@ -92,7 +92,7 @@ Minikube Start
 
 You should observe miniKube running through a series of steps to create the Kubernetes Cluster and node, as seen below.
 
-![image alt]()
+![image alt](https://github.com/Tatenda-Prince/Kubernetes-Declaratively-Deploying-Infrastructure-Iac-/blob/36e953bd1e392ae99a97d18d84a18d5dbf04f530/images/Screenshot%202024-12-29%20155541.png)
 
 Run the followings commands in succession to verify the a node and default ClusterIP service was created when deploying the Kubernetes cluster —
 
