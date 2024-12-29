@@ -166,6 +166,7 @@ You should received similar outputs after running all the command as show below 
 
 ![image alt](https://github.com/Tatenda-Prince/Kubernetes-Declaratively-Deploying-Infrastructure-Iac-/blob/fd524081d6b97c337dbfc68c2ff6e461b72a7bf0/images/Screenshot%202024-12-29%20171933.png)
 
+
 Check the status of the Pod with a kubectl get pods command.
 As soon as the Pod enters the running state, run a kubectl get svc and copy the value
 from the EXTERNAL-IP column. It might show as ‘ localhost ‘ if you’re running a Docker
@@ -175,10 +176,9 @@ version 1.0.
 
 ![image alt](https://github.com/Tatenda-Prince/Kubernetes-Declaratively-Deploying-Infrastructure-Iac-/blob/3e7fee3857e21b16d25dbe2ce63261f57d896f6d/images/Screenshot%202024-12-29%20172055.png)
 
-Be sure to complete the following step against your forked repo.
-Go to your forked repo and edit the index.html file. Change the <h1> line to something
-different and save your changes.
-Refresh the app’s web page to see your updates and you should see changes to you web browser 
+
+Be sure to complete the following step against your forked repo.Go to your forked repo and edit the index.html file. Change the <h1> line to something
+different and save your changes.Refresh the app’s web page to see your updates.
 
 ![image alt](https://github.com/Tatenda-Prince/Kubernetes-Declaratively-Deploying-Infrastructure-Iac-/blob/84082a9133392d6af96abf7e9cc9411ab9158d9b/images/Screenshot%202024-12-29%20172817.png)
 
