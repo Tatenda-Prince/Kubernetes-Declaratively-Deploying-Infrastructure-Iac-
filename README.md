@@ -102,7 +102,7 @@ kubectl get nodes
 
 You will see similar results as shown below. One default Service of type “ClusterIP” and one “minikube” Node that is the master/control plane.
 
-![image alt]()
+![image alt](https://github.com/Tatenda-Prince/Kubernetes-Declaratively-Deploying-Infrastructure-Iac-/blob/72a50ba0d4a0c286753a605a8483c5aecd1ec186/images/Screenshot%202024-12-29%20155626.png)
 
 Now that we’ve set up our environment, let’s proceed to Step 1 — Creating the Kubernetes deployment files using YAML to leverage IaC.
 
