@@ -129,6 +129,61 @@ A text editor window should open. Copy and paste the code below into the text ed
 ![image alt](https://github.com/Tatenda-Prince/Kubernetes-Declaratively-Deploying-Infrastructure-Iac-/blob/37fb2a22ab1fb71f0937b67e73ef94ab6970cd4f/images/Screenshot%202024-12-29%20170039.png)
 
 
+The main app container is called ctr-web. It’s based on an NGINX image and serves a
+static web page loaded from the shared html volume.
+The second container is called ctr-sync and is the sidecar. It watches a GitHub repo and
+syncs changes into the same shared html volume.
+When the contents of the GitHub repo change, the sidecar copies the updates to the
+shared volume, where the app container notices and serves an updated version of the
+
+web page.
+
+We’ll walk through the following steps to see it in action:
+1. Fork the GitHub repo
+2. Update the YAML file with the URL of your forked repo
+3. Deploy the app
+4. Connect to the app and see it display This is version 1.0
+5. Make a change to your fork of the GitHub repo
+6. Verify your changes appear on the web page
+
+ Go to GitHub and fork the following repo. You’ll need a GitHub account to do this.
+
+ https://github.com/Tatenda-Prince/ps-sidecar
+ 
+Come back to your local machine and edit the sidecarpod.yml. Change the GIT_SYNC_-
+REPO value to match the URL of your forked repo, and save your changes.
+Run the following command to deploy the application. It will deploy the Pod as well as a
+Service you’ll use to connect to the app.
+
+kubectl apply -f sidecarpod.yml
+
+kubectl get all
+
+kubecttl get service 
+
+You should received similar outputs after running all the command as show below —
+
+
+![image alt]()
+
+Check the status of the Pod with a kubectl get pods command.
+As soon as the Pod enters the running state, run a kubectl get svc and copy the value
+from the EXTERNAL-IP column. It might show as ‘ localhost ‘ if you’re running a Docker
+Desktop cluster or another local option.
+Paste the value into a new browser tab to see the web page. It will display This is
+version 1.0.
+
+![image alt]()
+
+
+
+
+
+
+
+
+
+
 
 
 
