@@ -124,7 +124,7 @@ Here I will use the nano text editor to create a Kubernetes Service resource YAM
 
 nano sidecarpod.yml
 
-A text editor window should open. Copy and paste the code below into the text editor.
+A text editor window should open. Copy and paste the code into the text editor.
 
 ![image alt](https://github.com/Tatenda-Prince/Kubernetes-Declaratively-Deploying-Infrastructure-Iac-/blob/37fb2a22ab1fb71f0937b67e73ef94ab6970cd4f/images/Screenshot%202024-12-29%20170039.png)
 
@@ -174,6 +174,16 @@ Paste the value into a new browser tab to see the web page. It will display This
 version 1.0.
 
 ![image alt](https://github.com/Tatenda-Prince/Kubernetes-Declaratively-Deploying-Infrastructure-Iac-/blob/3e7fee3857e21b16d25dbe2ce63261f57d896f6d/images/Screenshot%202024-12-29%20172055.png)
+
+Be sure to complete the following step against your forked repo.
+Go to your forked repo and edit the index.html file. Change the <h1> line to something
+different and save your changes.
+Refresh the app’s web page to see your updates and you should see changes to you web browser 
+
+![image alt]()
+
+
+
 
 
 
