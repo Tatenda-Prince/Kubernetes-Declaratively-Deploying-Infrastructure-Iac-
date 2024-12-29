@@ -164,7 +164,7 @@ kubecttl get service
 You should received similar outputs after running all the command as show below —
 
 
-![image alt]()
+![image alt](https://github.com/Tatenda-Prince/Kubernetes-Declaratively-Deploying-Infrastructure-Iac-/blob/fd524081d6b97c337dbfc68c2ff6e461b72a7bf0/images/Screenshot%202024-12-29%20171933.png)
 
 Check the status of the Pod with a kubectl get pods command.
 As soon as the Pod enters the running state, run a kubectl get svc and copy the value
