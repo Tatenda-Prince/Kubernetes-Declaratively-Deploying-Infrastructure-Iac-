@@ -75,6 +75,7 @@ Basic knowledge and use of an Interactive Development Environment (IDE).
 
 # Objectives
 
+1. Deploy a sidercar container that watches  a remote Git Repo, and synch the changes to the share volume and the main app container will update the webpage.
 
 
 # Step 0: Setup Kubernetes environment with miniKube
@@ -177,10 +178,18 @@ version 1.0.
 ![image alt](https://github.com/Tatenda-Prince/Kubernetes-Declaratively-Deploying-Infrastructure-Iac-/blob/3e7fee3857e21b16d25dbe2ce63261f57d896f6d/images/Screenshot%202024-12-29%20172055.png)
 
 
-Be sure to complete the following step against your forked repo.Go to your forked repo and edit the index.html file. Change the <h1> line to something
+Be sure to complete the following step against your forked repo.Go to your forked repo and edit the index.html file. Change the H1 line to something
 different and save your changes.Refresh the app’s web page to see your updates.
 
+
 ![image alt](https://github.com/Tatenda-Prince/Kubernetes-Declaratively-Deploying-Infrastructure-Iac-/blob/84082a9133392d6af96abf7e9cc9411ab9158d9b/images/Screenshot%202024-12-29%20172817.png)
+
+Congratulations. The sidecar container successfully watched a remote Git repo, synced
+the changes to a shared volume, and the main app container updated the web page.
+Feel free to run the kubectl get pods and kubectl describe pod commands to see
+how multi-container Pods appear in the outputs.
+
+
 
 
 
