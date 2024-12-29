@@ -180,7 +180,7 @@ Go to your forked repo and edit the index.html file. Change the <h1> line to som
 different and save your changes.
 Refresh the app’s web page to see your updates and you should see changes to you web browser 
 
-![image alt]()
+![image alt](https://github.com/Tatenda-Prince/Kubernetes-Declaratively-Deploying-Infrastructure-Iac-/blob/84082a9133392d6af96abf7e9cc9411ab9158d9b/images/Screenshot%202024-12-29%20172817.png)
 
 
 
