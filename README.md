@@ -173,7 +173,7 @@ Desktop cluster or another local option.
 Paste the value into a new browser tab to see the web page. It will display This is
 version 1.0.
 
-![image alt]()
+![image alt](https://github.com/Tatenda-Prince/Kubernetes-Declaratively-Deploying-Infrastructure-Iac-/blob/3e7fee3857e21b16d25dbe2ce63261f57d896f6d/images/Screenshot%202024-12-29%20172055.png)
 
 
 
