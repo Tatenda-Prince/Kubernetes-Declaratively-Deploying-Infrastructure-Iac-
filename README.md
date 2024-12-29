@@ -107,6 +107,20 @@ You will see similar results as shown below. One default Service of type “Clus
 Now that we’ve set up our environment, let’s proceed to Step 1 — Creating the Kubernetes deployment files using YAML to leverage IaC.
 
 
+# Step 1: Create Kubernetes deploying Multi-container Pod - sidecar container using a YAML manifest file.
+
+Sidecar containers are regular containers that run at the same time as application
+containers for the entire lifecycle of the Pod.
+
+The job of a sidecar container is to add functionality to an app without having to
+implement it in the actual app. Common examples include sidecars that scrape logs,
+sync remote content, broker connections, and munge data. They’re also heavily used
+by services meshes where the sidecar intercepts network traffic and provides traffic
+encryption and telemetry.
+
+
+
+
 
 
 
