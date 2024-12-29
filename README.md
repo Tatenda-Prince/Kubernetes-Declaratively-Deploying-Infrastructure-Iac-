@@ -118,6 +118,23 @@ sync remote content, broker connections, and munge data. They’re also heavily 
 by services meshes where the sidecar intercepts network traffic and provides traffic
 encryption and telemetry.
 
+As we proceed, use a preferred text editor in your local command line interface to create each YAML file.
+
+Here I will use the nano text editor to create a Kubernetes Service resource YAML file by running the following command —
+
+nano sidecarpod.yml
+
+A text editor window should open. Copy and paste the code below into the text editor.
+
+![image alt]()
+
+
+
+
+
+
+
+
 
 
 
