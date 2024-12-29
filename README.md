@@ -189,6 +189,9 @@ the changes to a shared volume, and the main app container updated the web page.
 Feel free to run the kubectl get pods and kubectl describe pod commands to see
 how multi-container Pods appear in the outputs.
 
+# Clean up
+
+kubectl delete -f sidecarpod.yml 
 
 
 
