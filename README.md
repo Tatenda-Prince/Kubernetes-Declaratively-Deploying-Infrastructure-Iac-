@@ -97,9 +97,9 @@ You should observe miniKube running through a series of steps to create the Kube
 
 Run the followings commands in succession to verify the a node and default ClusterIP service was created when deploying the Kubernetes cluster —
 
-kubectl get all
+~ kubectl get all
 
-kubectl get nodes
+~ kubectl get nodes
 
 You will see similar results as shown below. One default Service of type “ClusterIP” and one “minikube” Node that is the master/control plane.
 
@@ -123,7 +123,7 @@ As we proceed, use a preferred text editor in your local command line interface 
 
 Here I will use the nano text editor to create a Kubernetes Service resource YAML file by running the following command —
 
-nano sidecarpod.yml
+~ nano sidecarpod.yml
 
 A text editor window should open. Copy and paste the code into the text editor.
 
@@ -156,11 +156,11 @@ REPO value to match the URL of your forked repo, and save your changes.
 Run the following command to deploy the application. It will deploy the Pod as well as a
 Service you’ll use to connect to the app.
 
-kubectl apply -f sidecarpod.yml
+~ kubectl apply -f sidecarpod.yml
 
-kubectl get all
+~ kubectl get all
 
-kubecttl get service 
+~ kubecttl get service 
 
 You should received similar outputs after running all the command as show below —
 
@@ -191,7 +191,7 @@ how multi-container Pods appear in the outputs.
 
 # Clean up
 
-kubectl delete -f sidecarpod.yml 
+~ kubectl delete -f sidecarpod.yml 
 
 
 
