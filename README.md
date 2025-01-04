@@ -192,6 +192,7 @@ how multi-container Pods appear in the outputs.
 # Clean up
 
 ~ kubectl delete -f sidecarpod.yml 
+'''
 
 
 
