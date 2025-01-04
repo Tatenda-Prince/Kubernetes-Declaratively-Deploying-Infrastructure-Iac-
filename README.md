@@ -192,8 +192,14 @@ how multi-container Pods appear in the outputs.
 # Clean up
 
 ~ kubectl delete -f sidecarpod.yml 
-'''
 
+
+```language
+// Your code here
+function example() {
+  console.log("Hello, GitHub!");
+}
+```
 
 
 
