@@ -142,8 +142,47 @@ nano sidecarpod.yml
 
 A text editor window should open. Copy and paste the code into the text editor.
 
-
-
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: git-sync
+  labels:
+    app: sidecar
+spec:
+  containers:
+  - name: ctr-web
+    image: nginx
+    volumeMounts:
+    - name: html
+      mountPath: /usr/share/nginx/
+  - name: ctr-sync
+    image: k8s.gcr.io/git-sync:v3.1.6
+    volumeMounts:
+    - name: html
+      mountPath: /tmp/git
+    env:
+    - name: GIT_SYNC_REPO
+      value: https://github.com/Tatenda-Prince/ps-sidecar
+    - name: GIT_SYNC_BRANCH
+      value: master
+    - name: GIT_SYNC_DEPTH
+      value: "1"
+    - name: GIT_SYNC_DEST
+      value: "html"
+  volumes:
+  - name: html
+    emptyDir: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: svc-sidecar
+spec:
+  selector:
+    app: sidecar
+  ports:
+```
 
 
 The main app container is called ctr-web. It’s based on an NGINX image and serves a
@@ -152,10 +191,11 @@ The second container is called ctr-sync and is the sidecar. It watches a GitHub 
 syncs changes into the same shared html volume.
 When the contents of the GitHub repo change, the sidecar copies the updates to the
 shared volume, where the app container notices and serves an updated version of the
-
 web page.
 
+
 We’ll walk through the following steps to see it in action:
+
 1. Fork the GitHub repo
 2. Update the YAML file with the URL of your forked repo
 3. Deploy the app
@@ -163,20 +203,27 @@ We’ll walk through the following steps to see it in action:
 5. Make a change to your fork of the GitHub repo
 6. Verify your changes appear on the web page
 
+ 
  Go to GitHub and fork the following repo. You’ll need a GitHub account to do this.
 
- https://github.com/Tatenda-Prince/ps-sidecar
+ https://github.com/Tatenda-Prince/ps-sidecar-K8s
  
 Come back to your local machine and edit the sidecarpod.yml. Change the GIT_SYNC_-
 REPO value to match the URL of your forked repo, and save your changes.
 Run the following command to deploy the application. It will deploy the Pod as well as a
 Service you’ll use to connect to the app.
 
-~ kubectl apply -f sidecarpod.yml
+```command
+kubectl apply -f sidecarpod.yml
+```
 
-~ kubectl get all
+```command
+kubectl get all
+```
 
-~ kubecttl get service 
+```command
+kubecttl get service 
+```
 
 You should received similar outputs after running all the command as show below —
 
@@ -207,15 +254,10 @@ how multi-container Pods appear in the outputs.
 
 # Clean up
 
-~ kubectl delete -f sidecarpod.yml 
-
-
-```language
-// Your code here
-function example() {
-  console.log("Hello, GitHub!");
-}
+```command
+kubectl delete -f sidecarpod.yml 
 ```
+
 
 
 
