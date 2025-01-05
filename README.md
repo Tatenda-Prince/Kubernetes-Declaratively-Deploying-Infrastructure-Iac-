@@ -84,13 +84,30 @@ Kubectl describe is used to display detailed information about a Kubernetes reso
 1.Run the following command to install miniKube —
 
 ```command
-wsl install minikube
+# Download the latest Minikube
+curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+
+# Make it executable
+chmod +x ./minikube
+
+# Move it to your user's executable PATH
+sudo mv ./minikube /usr/local/bin/
+
+#Set the driver version to Docker
+minikube config set driver docker
 ```
 
 2.Now, run the command below to install Hyperkit, a hypervisor for Windows systems —
 
-```command
-wsl install hyperkitbrew install hyperkit
+```comman
+# Download the latest Kubectl
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+
+# Make it executable
+chmod +x ./kubectl
+
+# Move it to your user's executable PATH
+sudo mv ./kubectl /usr/local/bin/
 ```
 3.Finally, run the following command to start miniKube with hyperkit as the driver —
 
