@@ -19,59 +19,60 @@ Now let’s get into the more technical concepts of Kubernetes.
 
 # Kubernetes Info
 
-# Kubernetes
+## Kubernetes
 
 Kubernetes is an open-source container orchestration tool at heart. It helps automate managing and deploying containerized applications, making it easier for developers to build, deploy and manage their applications.
 
-# Minikube
+## Minikube
 
 Minikube is very lightweight Kubernetes application that deploys a Kubernetes cluster on a virtual machine hosted on a local system. It supports all major operation systems (Mac, Windows and Linux).
 
-# Pod
+## Pod
 A Pod is the smallest deployable unit in Kubernetes and represents a single instance of a running process in a cluster. It can contain one or more containers that share the same network namespace and are deployed and managed together.
 
-# Service
+## Service
 
 A Service provides a stable IP address and DNS name for a set of Pods and allows for the expose of these Pods to be accessed by other parts of the application or by external clients.
 
-# Deployment
+## Deployment
 
 A Deployment manages a set of replicas of a Pod and allows you to declaratively define and manage the desired state of a group of Pods. It can also automatically create or delete replicas to match the desired state.
 
-# ConfigMap
+## ConfigMap
 
 A ConfigMap stores configuration data as key-value pairs or as plain text files in a data volume. It allows you to separate configuration data from your application code and makes it easier to manage configuration changes without redeploying your application.
 
 
 # Kubernetes Commands
 
-# kubctl get
+## kubctl get
 
 Kubectl get retrieves information about Kubernetes resources, such as Pods, Services, Deployments, ConfigMaps etc.
 
-# kubctl apply
+## kubctl apply
 
 kubctl apply is used to apply configuration changes to Kubernetes resources. It takes a YAML or JSON file that defines the desired state of a resource and applies the changes to the cluster.
 
-# Kubectl deploy
+## Kubectl deploy
 
 Kubectl deploy is used to deploy a new version of an application to a Kubernetes cluster. It creates a new Deployment resource with the desired number of replicas and updates the running Pods to match the new version of the application.
 
-# Kubctl create
+## Kubctl create
 
 Kubectl create is used to create new Kubernetes resources, such as Pods, Services, Deployments, ConfigMaps, etc. It also takes a YAML or JSON file that defines the desired state of the resource and creates the resource in the cluster.
 
-# Kubctl describe
+## Kubctl describe
 
 Kubectl describe is used to display detailed information about a Kubernetes resource, such as the resource’s labels, annotations, events and status. It is also useful for troubleshooting and debugging issues with Kubernetes resources.
 
 # Prerequisites
 
-Basic knowledge and understanding of Containerization and Docker
+1.Basic knowledge and understanding of Containerization and Docker
 
-Basic Linux command line knowledge
+2.Basic Linux command line knowledge
 
-Basic knowledge and use of an Interactive Development Environment (IDE).
+3.Basic knowledge and use of an Interactive Development Environment (IDE).
+
 
 # Objectives
 
@@ -81,25 +82,34 @@ Basic knowledge and use of an Interactive Development Environment (IDE).
 # Step 0: Setup Kubernetes environment with miniKube
 
 1.Run the following command to install miniKube —
-brew install minikube
+
+```command
+wsl install minikube
+```
 
 2.Now, run the command below to install Hyperkit, a hypervisor for Windows systems —
 
-brew install hyperkitbrew install hyperkit
-
+```command
+wsl install hyperkitbrew install hyperkit
+```
 3.Finally, run the following command to start miniKube with hyperkit as the driver —
 
+```command
 Minikube Start 
-
+```
 You should observe miniKube running through a series of steps to create the Kubernetes Cluster and node, as seen below.
 
 ![image alt](https://github.com/Tatenda-Prince/Kubernetes-Declaratively-Deploying-Infrastructure-Iac-/blob/36e953bd1e392ae99a97d18d84a18d5dbf04f530/images/Screenshot%202024-12-29%20155541.png)
 
 Run the followings commands in succession to verify the a node and default ClusterIP service was created when deploying the Kubernetes cluster —
 
-~ kubectl get all
+```command
+kubectl get all
+```
 
-~ kubectl get nodes
+```command
+kubectl get nodes
+```
 
 You will see similar results as shown below. One default Service of type “ClusterIP” and one “minikube” Node that is the master/control plane.
 
