@@ -133,11 +133,17 @@ As we proceed, use a preferred text editor in your local command line interface 
 
 Here I will use the nano text editor to create a Kubernetes Service resource YAML file by running the following command —
 
-~ nano sidecarpod.yml
+```command
+nano sidecarpod.yml
+```
+
+![image alt](https://github.com/Tatenda-Prince/Kubernetes-Declaratively-Deploying-Infrastructure-Iac-/blob/37fb2a22ab1fb71f0937b67e73ef94ab6970cd4f/images/Screenshot%202024-12-29%20170039.png)
+
 
 A text editor window should open. Copy and paste the code into the text editor.
 
-![image alt](https://github.com/Tatenda-Prince/Kubernetes-Declaratively-Deploying-Infrastructure-Iac-/blob/37fb2a22ab1fb71f0937b67e73ef94ab6970cd4f/images/Screenshot%202024-12-29%20170039.png)
+
+
 
 
 The main app container is called ctr-web. It’s based on an NGINX image and serves a
